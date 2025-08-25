@@ -1,17 +1,22 @@
-import { Route, Switch } from "wouter";
-import { OverviewPage } from "./overview/overview.page.tsx";
-import { Header } from "../components/Header/Header.tsx";
-import styles from "./router.module.css";
+import { GlobalLayout } from "@/layouts/global.layout.tsx";
+import { NotFoundPage } from "@/pages/notfound/notfound.page.tsx";
+import { OverviewRoute } from "@/pages/overview/overview.page.tsx";
+import { createRootRoute, createRouter } from "@tanstack/react-router";
 
-export const Router = () => {
-  return (
-    <>
-      <Header />
-      <main className={styles.main}>
-        <Switch>
-          <Route path={"/"} component={OverviewPage} />
-        </Switch>
-      </main>
-    </>
-  );
-};
+export const rootRoute = createRootRoute({
+  component: () => <GlobalLayout />,
+});
+
+const routeTree = rootRoute.addChildren([OverviewRoute]);
+
+export const router = createRouter({
+  routeTree,
+  defaultPreload: "intent",
+  defaultNotFoundComponent: () => <NotFoundPage />,
+});
+
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}

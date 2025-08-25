@@ -1,0 +1,40 @@
+.habit_item {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  background-color: var(--surface_container);
+  border-radius: 20px;
+
+  .icon {
+    color: black;
+    /* background-color: var(--color-green); */
+    padding: 16px;
+  }
+
+  .info {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .count {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+}
