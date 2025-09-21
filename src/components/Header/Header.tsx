@@ -16,14 +16,11 @@ export const Header = () => {
       </div>
       <div className={styles.center}>
         <Button
-          w="100%"
           variant={"ghost"}
-          size={"sm"}
           gap={"4px"}
-          p={"12px 8px"}
-          borderRadius={"12px"}
+          p={"12px 24px"}
+          borderRadius={"full"}
           onClick={() => setDaySelectOpen(true)}
-          bg={{ _hover: "surface_container" }}
         >
           <Text fontWeight={"bold"} fontSize={"18px"}>
             Today

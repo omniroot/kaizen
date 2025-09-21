@@ -1,5 +1,6 @@
-import { HStack, Link } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import { IconHome, IconList, type ReactNode } from "@tabler/icons-react";
+import { Link, useLocation, useRouter } from "@tanstack/react-router";
 
 interface ILink {
   icon: ReactNode;
@@ -8,7 +9,7 @@ interface ILink {
 }
 
 const links = [
-  { icon: <IconHome />, name: "Home", path: "/" },
+  { icon: <IconHome />, name: "Today", path: "/" },
   { icon: <IconList />, name: "Tasks", path: "/tasks" },
 ];
 
@@ -23,7 +24,7 @@ export const BottomNavigation = () => {
 };
 
 const NavItem = ({ item }: { item: ILink }) => {
-  // const [isCurrent] = useRoute(item.path);
+  const isCurrent = useLocation().pathname === item.path;
 
   return (
     <HStack
@@ -36,9 +37,12 @@ const NavItem = ({ item }: { item: ILink }) => {
       transition={"background 200ms, color 200ms"}
       justifyContent={"center"}
       cursor={"pointer"}
+      textDecor={"none"}
       asChild
     >
-      <Link href={item.path}>{item.icon}</Link>
+      <Link to={item.path}>
+        {item.icon} {isCurrent && item.name}
+      </Link>
     </HStack>
   );
 };

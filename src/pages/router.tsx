@@ -1,10 +1,24 @@
 import { GlobalLayout } from "@/layouts/global.layout.tsx";
 import { NotFoundPage } from "@/pages/notfound/notfound.page.tsx";
-import { OverviewRoute } from "@/pages/overview/overview.page.tsx";
-import { createRootRoute, createRouter } from "@tanstack/react-router";
+import { OverviewPage } from "@/pages/overview/overview.page.tsx";
+import {
+  createRootRoute,
+  createRoute,
+  createRouter,
+} from "@tanstack/react-router";
 
 export const rootRoute = createRootRoute({
   component: () => <GlobalLayout />,
+});
+
+export const OverviewRoute = createRoute({
+  path: "/",
+  getParentRoute: () => rootRoute,
+  component: () => <OverviewPage />,
+  loader: () => {
+    console.log(123123);
+    return 123;
+  },
 });
 
 const routeTree = rootRoute.addChildren([OverviewRoute]);

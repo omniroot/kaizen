@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/styles.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Provider } from "@/components/ui/provider.tsx";
 import { RouterProvider } from "@tanstack/react-router";
 import { router } from "@/pages/router.tsx";
+import { OmnikitProvider } from "@/theme/components/provider.tsx";
 
 const client = new QueryClient({
   defaultOptions: {
@@ -19,9 +19,9 @@ const client = new QueryClient({
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={client}>
-      <Provider>
+      <OmnikitProvider>
         <RouterProvider router={router} />
-      </Provider>
+      </OmnikitProvider>
     </QueryClientProvider>
   </StrictMode>
 );
