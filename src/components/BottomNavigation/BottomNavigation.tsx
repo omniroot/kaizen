@@ -1,6 +1,11 @@
 import { HStack } from "@chakra-ui/react";
-import { IconHome, IconList, type ReactNode } from "@tabler/icons-react";
-import { Link, useLocation, useRouter } from "@tanstack/react-router";
+import {
+  IconHome,
+  IconList,
+  IconUser,
+  type ReactNode,
+} from "@tabler/icons-react";
+import { Link, useLocation } from "@tanstack/react-router";
 
 interface ILink {
   icon: ReactNode;
@@ -11,6 +16,7 @@ interface ILink {
 const links = [
   { icon: <IconHome />, name: "Today", path: "/" },
   { icon: <IconList />, name: "Tasks", path: "/tasks" },
+  { icon: <IconUser />, name: "Profile", path: "/profile" },
 ];
 
 export const BottomNavigation = () => {

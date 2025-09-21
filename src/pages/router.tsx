@@ -1,6 +1,8 @@
 import { GlobalLayout } from "@/layouts/global.layout.tsx";
+import { AuthPage } from "@/pages/auth.page.tsx";
 import { NotFoundPage } from "@/pages/notfound/notfound.page.tsx";
 import { OverviewPage } from "@/pages/overview/overview.page.tsx";
+import { ProfilePage } from "@/pages/profile.page.tsx";
 import {
   createRootRoute,
   createRoute,
@@ -21,7 +23,23 @@ export const OverviewRoute = createRoute({
   },
 });
 
-const routeTree = rootRoute.addChildren([OverviewRoute]);
+export const ProfileRoute = createRoute({
+  path: "/profile",
+  getParentRoute: () => rootRoute,
+  component: () => <ProfilePage />,
+});
+
+export const AuthRoute = createRoute({
+  path: "/auth",
+  getParentRoute: () => rootRoute,
+  component: () => <AuthPage />,
+});
+
+const routeTree = rootRoute.addChildren([
+  OverviewRoute,
+  ProfileRoute,
+  AuthRoute,
+]);
 
 export const router = createRouter({
   routeTree,
