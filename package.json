@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:frontend dev:backend",
     "dev:frontend": "vite --host --port 5173",
-    "dev:backend": "bun run --hot ./server/server.ts",
+    "dev:backend": "tsx watch ./server/server.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "start": "npm-run-all --parallel start:frontend start:backend",
     "start:frontend": "npx serve dist -l 9999",
-    "start:backend": "npx run ./server/server.ts",
+    "start:backend": "tsx ./server/server.ts",
     "preview": "vite preview --host --port 5173",
     "typegen:appwrite": "bun appwrite pull tables && bun run ./scripts/appwrite-typegen.ts",
     "typegen:chakra": "chakra typegen ./src/kumi-ui/theme.ts",
@@ -71,6 +71,7 @@
     "@vitejs/plugin-react-swc": "^3.11.0",
     "globals": "^16.3.0",
     "npm-run-all2": "^7.0.0",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.10",
     "vite-bundle-analyzer": "^1.2.1"
