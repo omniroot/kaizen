@@ -1,22 +1,56 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "~/*": [
-        "./*"
-      ]
-    }
-  }
+	"compilerOptions": {
+		"target": "ES2023",
+		"useDefineForClassFields": true,
+		"lib": [
+			"ES2023",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"module": "ESNext",
+		"types": [
+			"vite/client",
+		],
+		"skipLibCheck": true,
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"moduleDetection": "force",
+		"noEmit": true,
+		"jsx": "react-jsx",
+		/* Linting */
+		"strict": true,
+		"erasableSyntaxOnly": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"tsBuildInfoFile": ".tmp/.tsbuildinfo",
+		// "baseUrl": ".",
+		"paths": {
+			"@kumi-ui/*": [
+				"./src/kkumi-ui/*"
+			],
+			"@/*": [
+				"./src/*"
+			],
+			"~/*": [
+				"./*"
+			]
+		}
+	},
+	"include": [
+		"src",
+		"server"
+		// "old/UniversalDrawer.tsx",
+	],
+	"exclude": [
+		"dist",
+		"**/*.test.ts",
+		"**/*.test.tsx",
+		"old"
+	]
 }

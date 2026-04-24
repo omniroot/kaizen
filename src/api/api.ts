@@ -1,3 +1,20 @@
+import { QueryClient } from "@tanstack/react-query";
+import { hc } from "hono/client";
+import type { AppType } from "~/server/server.ts";
+
+export const tanstackQueryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retryDelay: 20000,
+      staleTime: 5 * 60 * 1000,
+    },
+  },
+});
+
+const API_URL = `${window.location.protocol}//${window.location.hostname}:3000`;
+export const api = hc<AppType>(API_URL);
+
 // import type { IHabit, IHabitUpdate } from "@/api/supabase.interface.ts";
 // import { supabase } from "@/api/supabase.ts";
 // import { mutationOptions, queryOptions, useQuery } from "@tanstack/react-query";

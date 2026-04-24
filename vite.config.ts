@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { analyzer } from "vite-bundle-analyzer";
+import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
+// import { analyzer } from "vite-bundle-analyzer";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,7 +13,11 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(),
+    // tanstackRouter({
+    //   target: "react",
+    //   autoCodeSplitting: true,
+    //   routesDirectory: "./src/pages/",
+    // }),
     svgr({
       svgrOptions: {
         replaceAttrValues: {
@@ -21,6 +25,7 @@ export default defineConfig({
         },
       },
     }),
-    analyzer({ openAnalyzer: true }),
+    react(),
+    // analyzer({ openAnalyzer: false }),
   ],
 });

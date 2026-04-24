@@ -1,0 +1,92 @@
+{
+  "habits": [
+    {
+      "id": "be5a626e-a88a-4732-8d58-3e94b4386d11",
+      "name": "Brush teeth 5",
+      "description": "Brush your teeth twice a day",
+      "status": "active",
+      "frequency": "daily",
+      "created_at": "string",
+      "updated_at": "string",
+      "icon_name": "meh",
+      "color": "#FFA877",
+      "entries": []
+    },
+    {
+      "name": "Skibidi from bd",
+      "status": "paused",
+      "frequency": "daily",
+      "icon_name": "brain",
+      "id": "c9fe398a-6fd3-430c-a9b4-f8d8aeabfc19",
+      "created_at": "2026-03-25T16:35:01.265Z",
+      "updated_at": "2026-03-25T16:35:01.265Z",
+      "entries": []
+    },
+    {
+      "name": "Archived sdsad",
+      "status": "archived",
+      "frequency": "daily",
+      "icon_name": "brain",
+      "id": "caabb03b-97e5-4a50-91b0-7e5911572279",
+      "created_at": "2026-03-25T16:35:01.265Z",
+      "updated_at": "2026-03-25T16:35:01.265Z",
+      "entries": []
+    },
+    {
+      "name": "Test",
+      "status": "active",
+      "frequency": "daily",
+      "icon_name": "🎯",
+      "color": "#FFA878",
+      "id": "c40ba945-bed4-44a0-8316-e91d6189d7d2",
+      "created_at": "2026-04-19T01:19:30.741Z",
+      "updated_at": "2026-04-19T01:19:30.741Z"
+    },
+    {
+      "name": "123",
+      "status": "archived",
+      "frequency": "daily",
+      "icon_name": "🎯",
+      "color": "#FFA878",
+      "id": "95f06503-9797-4d42-a02a-e57118f2d988",
+      "created_at": "2026-04-19T01:31:04.142Z",
+      "updated_at": "2026-04-22T10:51:49.328Z"
+    },
+    {
+      "name": "456",
+      "status": "active",
+      "frequency": "daily",
+      "icon_name": "🎯",
+      "color": "#FFA878",
+      "id": "89e42e46-bce0-477c-8193-46828e2ca843",
+      "created_at": "2026-04-19T01:31:20.335Z",
+      "updated_at": "2026-04-22T12:02:38.406Z"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "Отнести бабушке спички",
+      "status": "todo",
+      "id": "1efa5cfe-a4e7-4713-966c-a54c5687cccb",
+      "created_at": "2026-04-22T14:39:01.206Z",
+      "updated_at": "2026-04-24T16:39:17.212Z",
+      "is_archived": false
+    },
+    {
+      "name": "Убраться в комнате",
+      "status": "todo",
+      "is_archived": false,
+      "id": "4b057dda-dcb8-4025-ae4b-f448ecf93326",
+      "created_at": "2026-04-24T16:39:37.750Z",
+      "updated_at": "2026-04-24T16:39:37.750Z"
+    },
+    {
+      "name": "123",
+      "status": "todo",
+      "is_archived": false,
+      "id": "5649d76f-0d54-44be-9128-e7247057203f",
+      "created_at": "2026-04-24T16:48:40.181Z",
+      "updated_at": "2026-04-24T16:48:40.181Z"
+    }
+  ]
+}
