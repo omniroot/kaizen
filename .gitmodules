@@ -1,3 +1,6 @@
 [submodule "src/kumi-ui"]
 	path = src/kumi-ui
-	url = https://github.com/omniroot/kumi-ui.git
+	url = https://github.com/omniroot/kumi-ui
+[submodule "kumi-ui"]
+	path = kumi-ui
+	url = https://github.com/omniroot/kumi-ui
