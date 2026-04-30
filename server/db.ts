@@ -8,8 +8,10 @@ export interface KaizenDB {
 	tasks: Tasks;
 }
 
+const __dirname = path.resolve();
+
 export const db = await JSONFilePreset<KaizenDB>(
-	path.join(__dirname, "data", "db.json"),
+	path.join(__dirname,"server", "data", "db.json"),
 	{
 		habits: [],
 		tasks: [],

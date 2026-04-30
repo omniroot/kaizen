@@ -69,24 +69,32 @@
       "status": "todo",
       "id": "1efa5cfe-a4e7-4713-966c-a54c5687cccb",
       "created_at": "2026-04-22T14:39:01.206Z",
-      "updated_at": "2026-04-24T16:39:17.212Z",
+      "updated_at": "2026-04-25T04:55:56.684Z",
       "is_archived": false
     },
     {
       "name": "Убраться в комнате",
-      "status": "todo",
+      "status": "completed",
       "is_archived": false,
       "id": "4b057dda-dcb8-4025-ae4b-f448ecf93326",
       "created_at": "2026-04-24T16:39:37.750Z",
-      "updated_at": "2026-04-24T16:39:37.750Z"
+      "updated_at": "2026-04-26T06:02:28.857Z"
     },
     {
       "name": "123",
-      "status": "todo",
+      "status": "completed",
       "is_archived": false,
       "id": "5649d76f-0d54-44be-9128-e7247057203f",
       "created_at": "2026-04-24T16:48:40.181Z",
-      "updated_at": "2026-04-24T16:48:40.181Z"
+      "updated_at": "2026-04-26T06:03:14.386Z"
+    },
+    {
+      "name": "Добавить сохранение темы в localStorage",
+      "status": "todo",
+      "is_archived": false,
+      "id": "5e9810e1-9ad4-454a-9bd9-4d9ec4a904af",
+      "created_at": "2026-04-25T05:04:59.172Z",
+      "updated_at": "2026-04-25T05:04:59.172Z"
     }
   ]
 }

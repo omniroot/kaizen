@@ -10,7 +10,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "start": "npm-run-all --parallel start:frontend start:backend",
-    "start:frontend": "npx serve dist -l 9999",
+    "start:frontend": "npx serve dist -l 9999 -s",
     "start:backend": "tsx ./server/server.ts",
     "preview": "vite preview --host --port 5173",
     "typegen:appwrite": "bun appwrite pull tables && bun run ./scripts/appwrite-typegen.ts",

@@ -11,8 +11,10 @@ import { tasksRouter } from "~/server/routes/tasks.route.ts";
 import utilsRouter from "~/server/routes/utils.route.ts";
 import { eventEmitter } from "~/server/utils/events.ts";
 
+const __dirname = path.resolve();
+
 const app = new Hono({}).use("*", cors()).use("*", logger());
-const app_data_folder = path.resolve(__dirname, "data");
+const app_data_folder = path.resolve(__dirname,"server", "data");
 
 const routes = app
 	.route("/habits", habitsRouter)
